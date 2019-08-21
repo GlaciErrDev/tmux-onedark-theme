@@ -8,6 +8,9 @@ onedark_green="#98c379"
 onedark_visual_grey="#3e4452"
 onedark_comment_grey="#5c6370"
 
+bg_inactive="#262626"
+bg_active=$onedark_black
+
 get() {
    local option=$1
    local default_value=$2
@@ -58,8 +61,8 @@ setw "window-status-activity-attr" "none"
 
 setw "window-status-separator" ""
 
-set "window-style" "fg=$onedark_comment_grey"
-set "window-active-style" "fg=$onedark_white"
+set "window-style" "bg=$bg_inactive"
+set "window-active-style" "fg=$onedark_white, bg=$bg_active"
 
 set "pane-border-fg" "$onedark_white"
 set "pane-border-bg" "$onedark_black"
